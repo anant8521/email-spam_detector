@@ -77,11 +77,12 @@
                 <label for="mail">Enter your mail context:</label>
                 <textarea class="form-control" id="mail" name="mail" rows="3">{% if not classify is defined %}{{ request.form.mail }}{% endif %}</textarea>
             </div>
+
             {% if classify is not defined %}
-    <button type="submit" class="btn btn-primary">Predict</button>
-{% else %}
-    <a href="{{ url_for('home') }}" class="btn btn-secondary">Check Another</a>
-{% endif %}
+                <button type="submit" class="btn btn-primary">Predict</button>
+            {% else %}
+                <a href="{{ url_for('home') }}" class="btn btn-secondary">Check Another</a>
+            {% endif %}
         </form>
 
         {% if classify is defined %}
@@ -109,7 +110,6 @@
             btn.textContent = darkModeEnabled ? "☀️" : "🌙";
         }
 
-        // On load, enable dark mode by default unless user has explicitly set preference
         window.onload = function () {
             const userPreference = localStorage.getItem("darkMode");
             const body = document.body;
