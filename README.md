@@ -66,16 +66,16 @@ To build a spam classifier using **Naive Bayes** or **SVM**, and deploy it throu
 👉 [Click here to use the app](https://email-spam-detector-am60.onrender.com)
 
 ## 📁 Project Structure
-
-| File/Folder              | Description                              |
-|--------------------------|------------------------------------------|
-| `app.py`                 | Flask backend logic                      |
-| `index.html`             | Web frontend with dark/light toggle      |
-| `mail_data.csv`          | Email dataset                            |
-| `feature_extraction.pkl` | Saved TF-IDF vectorizer                  |
-| `logistic_regression.pkl`| Trained ML model                         |
-| `notebook.ipynb`         | Jupyter notebook with full ML pipeline   |
-| `Screenshot Output/`     | Folder containing sample classification screenshots |
+ 
+|         File/Folder                 |            Description                   |
+|-------------------------------------|------------------------------------------|
+| `app.py`                            | Flask backend logic                      |
+| `index.html`                        | Web frontend with dark/light toggle      |
+| `mail_data.csv`                     | Email dataset                            |
+| `feature_extraction.pkl`            | Saved TF-IDF vectorizer                  |
+| `logistic_regression.pkl`           | Trained ML model                         |
+| `email_spam_detector.ipynb`         | Jupyter notebook with full ML pipeline   |
+| `Screenshot/`                       | Folder containing sample classification screenshots |
 
 ---
 
