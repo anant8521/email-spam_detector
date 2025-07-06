@@ -84,14 +84,14 @@ To build a spam classifier using **Naive Bayes** or **SVM**, and deploy it throu
 
 ## 📸 Sample Output
 
-### ✅ Ham (Not Spam)
+### ✅ Ham (Not Spam) Classifier Output
 > - "Hey Anant, don't forget we have class at 10 AM tomorrow."  
 > - "Your electricity bill of ₹500 is due on 10th July."
 
 ![Ham Classifier Output](screenshots/ham.png)
 ---
 
-### 🚫 Spam
+### 🚫 Spam Classifier Output
 > - "Congratulations! You’ve won ₹1,00,000. Click here to claim!"  
 > - "Your bank account has been blocked. Login here to fix it: fake-link.com"
 
