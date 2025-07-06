@@ -63,7 +63,7 @@ To build a spam classifier using **Naive Bayes** or **SVM**, and deploy it throu
     ```
 ---
 ## 🌐 Live Hosted App
-👉 [Click here to use the app](https://email-spam-detector-am60.onrender.com)
+👉 [Click here to use the app](https://email-spam-detector-1-v127.onrender.com)
 
 ## 📁 Project Structure
  
