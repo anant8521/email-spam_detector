@@ -72,18 +72,16 @@
     <div class="container mt-5">
         <button class="btn btn-secondary btn-toggle" onclick="toggleMode()" id="modeToggleBtn">🌙</button>
         <h1 class="mb-4">Email Spam Message Detector</h1>
+
+        {% if classify is not defined %}
         <form method="POST" action="{{ url_for('analyze_mail') }}">
             <div class="form-group">
                 <label for="mail">Enter your mail context:</label>
-                <textarea class="form-control" id="mail" name="mail" rows="3">{% if not classify is defined %}{{ request.form.mail }}{% endif %}</textarea>
+                <textarea class="form-control" id="mail" name="mail" rows="3"></textarea>
             </div>
-
-            {% if classify is not defined %}
-                <button type="submit" class="btn btn-primary">Predict</button>
-            {% else %}
-                <a href="{{ url_for('home') }}" class="btn btn-secondary">Check Another</a>
-            {% endif %}
+            <button type="submit" class="btn btn-primary">Predict</button>
         </form>
+        {% endif %}
 
         {% if classify is defined %}
             <div class="mt-4">
@@ -96,6 +94,7 @@
                     <strong>Mail Content:</strong>
                     <div class="p-3 border rounded" style="white-space: pre-wrap;">{{ request.form.mail }}</div>
                 </div>
+                <a href="{{ url_for('home') }}" class="btn btn-secondary mt-3">Check Another</a>
             </div>
         {% endif %}
     </div>
@@ -105,7 +104,6 @@
             const body = document.body;
             const btn = document.getElementById("modeToggleBtn");
             const darkModeEnabled = body.classList.toggle("dark-mode");
-
             localStorage.setItem("darkMode", darkModeEnabled);
             btn.textContent = darkModeEnabled ? "☀️" : "🌙";
         }
